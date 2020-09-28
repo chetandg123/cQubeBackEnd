@@ -9,9 +9,9 @@ class UdiseTransformer(unittest.TestCase):
         cal = GetData()
         runningcount = cal.get_runningCount("udise_transformer")
         if runningcount == 0:
-            self.assertNotEqual(0, runningcount, "udise data transformer running count should not be 0 after installation")
+            print("udise data transformer running count is 0 after installation")
         else:
-            print("udise data transformer running count is "+str(runningcount)+" after installation")
+            self.assertEqual(0, runningcount, "udise data transformer running count is not 0 after installation")
 
     def test_udise_transformer_disabledCount(self):
         cal = GetData()
@@ -33,9 +33,9 @@ class UdiseTransformer(unittest.TestCase):
         cal = GetData()
         stopped = cal.get_stoppedCount("udise_transformer")
         if stopped == 0:
-            print("udise data transformer stopped count is 0 after installation")
-        else:
             self.assertNotEqual(0, stopped, "udise data transformer stopped count should not be 0 after installation")
+        else:
+            print("udise data transformer stopped count is" + " " + str(stopped) + " " + "after installation")
 
 if __name__ == '__main__':
     unittest.main()

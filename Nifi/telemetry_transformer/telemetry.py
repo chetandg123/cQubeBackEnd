@@ -9,7 +9,7 @@ class TelemetryTransformer(unittest.TestCase):
         cal = GetData()
         runningcount = cal.get_runningCount("cqube_telemetry_transformer")
         if runningcount == 0:
-            self.assertNotEqual(0, runningcount, "cqube telemetry data transformer running count should not be 0 after installation")
+            self.assertNotEqual(0, runningcount, "cqube telemetry data transformer is not at started stage after installation")
         else:
             print("cqube telemetry data transformer running count is "+str(runningcount)+" after installation")
 

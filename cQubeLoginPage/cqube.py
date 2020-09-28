@@ -12,8 +12,8 @@ class CqubeLogin(unittest.TestCase):
 
     def test_login_page(self):
         self.cal.open_cqube_appln(self.driver)
-        self.cal.login_cqube(self.driver)
-        self.assertEqual("cQube",self.driver.title,"cqube application is not working")
+        print(self.driver.title)
+        self.assertEqual("Log in to cQube",self.driver.title,"cqube application is not working")
 
 
     @classmethod

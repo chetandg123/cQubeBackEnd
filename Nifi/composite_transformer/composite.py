@@ -10,7 +10,7 @@ class CompositeTransformer(unittest.TestCase):
         if runningcount == 0:
             print("composite transformer running count is 0 after installation")
         else:
-            self.assertEqual(0,runningcount,"composite transformer running count is not 0 after installation")
+            self.assertEqual(0,runningcount,"composite transformer is at started stage after installation")
 
     def test_composite_transformer_disabledCount(self):
         cal = GetData()
@@ -32,7 +32,7 @@ class CompositeTransformer(unittest.TestCase):
         cal = GetData()
         stopped = cal.get_stoppedCount("composite_transformer")
         if stopped == 0:
-            self.assertNotEqual(0,stopped,"composite transformer stopped count should not be 0 after installation")
+            self.assertNotEqual(0,stopped,"composite transformer should be at stopped stage after installation")
         else:
             print("composite transformer stopped count is"+" "+str(stopped)+" "+"after installation")
 
