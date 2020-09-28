@@ -1,0 +1,5 @@
+selenium
+HTMLTestRunner-Python3
+configparser
+psycopg2-binary
+boto

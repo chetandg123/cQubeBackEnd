@@ -17,5 +17,5 @@ class Database(unittest.TestCase):
             raise self.failureException("Database is not configured with provided username and password")
     @classmethod
     def tearDownClass(self):
-        self.connection.close()
+        print()
 

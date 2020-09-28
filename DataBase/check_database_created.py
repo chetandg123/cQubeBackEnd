@@ -21,5 +21,5 @@ class Database(unittest.TestCase):
             raise self.failureException("'{}' Database not exist.".format(database_name))
     @classmethod
     def tearDownClass(self):
-        self.connection.close()
+        print()
 
