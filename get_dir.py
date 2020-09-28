@@ -20,3 +20,7 @@ class pwd():
         cwd = os.path.dirname(__file__)
         download_path = os.path.join(cwd, 'Downloads')
         return download_path
+    def get_s3_report_path(self):
+        cwd = os.path.dirname(__file__)
+        report_path = os.path.join(cwd, 'Reports/s3FilesCheck.html')
+        return report_path
