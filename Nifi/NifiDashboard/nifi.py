@@ -15,6 +15,7 @@ class NifiDashboard(unittest.TestCase):
 
         self.driver.get(self.nifi_domain)
         self.assertEqual("NiFi",self.driver.title,"Nifi dashboard is not working")
+        print(self.driver.title)
 
     @classmethod
     def tearDownClass(self):
