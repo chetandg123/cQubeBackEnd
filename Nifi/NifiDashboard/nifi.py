@@ -1,3 +1,4 @@
+import time
 import unittest
 
 from reuse_func import GetData
@@ -14,8 +15,14 @@ class NifiDashboard(unittest.TestCase):
     def test_nifi_dashboard(self):
 
         self.driver.get(self.nifi_domain)
-        self.assertEqual("NiFi",self.driver.title,"Nifi dashboard is not working")
-        print(self.driver.title)
+        title=self.driver.title
+        time.sleep(2)
+        if title.__contains__("NiFi"):
+            print("Nifi dashboard is working")
+        else:
+            raise self.failureException("Nifi dashboard is not working")
+
+
 
     @classmethod
     def tearDownClass(self):
