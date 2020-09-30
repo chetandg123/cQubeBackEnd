@@ -1,6 +1,17 @@
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo apt install ./google-chrome-stable_current_amd64.deb
-Check chrome brower version using command -> google-chrome -version
+Execution of automation testscripts for both installation and upgradation of backend configuration
 
-sudo pip3 install -r Requirements.txt
-python3 -m unittest TestSuites/run_configuration.py
+  python3 -m unittest TestSuites/run_configuration.py
+
+Automation testscripts to check the json files in the s3 output bucket
+
+   python3 -m unittest TestSuites/check_student_attendance_s3_files.py
+   python3 -m unittest TestSuites/check_crc_s3_files.py
+   python3 -m unittest TestSuites/check_semester_s3_files.py
+   python3 -m unittest TestSuites/check_schoolinfra_s3_files.py
+   python3 -m unittest TestSuites/check_diksha_s3_files.py
+   python3 -m unittest TestSuites/check_udise_s3_files.py
+   python3 -m unittest TestSuites/check_pat_s3_files.py
+   python3 -m unittest TestSuites/check_composite_s3_files.py
+   python3 -m unittest TestSuites/check_log_summary_s3_files.py
+  
+
