@@ -99,14 +99,7 @@ class LogSummary(unittest.TestCase):
         if flag == False:
             raise self.failureException("log summary inspection json file is not generated")
 
-    def test_log_summary_telemetry_file(self):
-        flag = False
-        for x in self.log_summary:
-            if x[len(x) - 1].__contains__("log_summary_cqube_telemetry.json"):
-                print("log summary telemetry file generated successfully")
-                flag = True
-        if flag == False:
-            raise self.failureException("log summary telemetry json file is not generated")
+
 
 
 

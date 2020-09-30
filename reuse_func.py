@@ -227,13 +227,17 @@ class GetData():
     def get_table_report_all_files(self,all):
         lst=[]
         for x in range(2401,2434):
-            lst.append("diksha/table_reports/"+str(all)+"/{}.json".format(x))
+            if x != 2417:
+                lst.append("diksha/table_reports/"+str(all)+"/{}.json".format(x))
         lst.append("diksha/table_reports/"+str(all)+"/All.json")
         return lst
     def get_table_report_files(self,all):
         lst=[]
         for x in range(2401,2434):
-            lst.append("diksha/table_reports/all/{}/{}.json".format(all,x))
+            if x != 2417:
+                lst.append("diksha/table_reports/all/{}/{}.json".format(all,x))
         lst.append("diksha/table_reports/all/{}/All.json".format(all))
         return lst
-
+    def get_pat_grades_files(self):
+        self.pat_grades=['Grade 3.json','Grade 4.json','Grade 5.json','Grade 6.json','Grade 7.json','Grade 8.json']
+        return self.pat_grades
